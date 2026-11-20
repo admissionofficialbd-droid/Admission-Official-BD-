@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Admission Official BD</title>
+<style>
+:root{--bg:#f4f8f5;--card:#fff;--text:#12261c;--muted:#52695c;--green:#0d5c3e;--gold:#e0a800;--line:#d8e5dd;--ok:#0a7a45;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0c1a13;--card:#13271d;--text:#e8f2ec;--muted:#9bb5a6;--green:#2fa77a;--gold:#f0bd2c;--line:#244335;--ok:#4be08f}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans Bengali",sans-serif;line-height:1.5}
+.wrap{max-width:900px;margin:0 auto;padding:0 14px}
+header{background:#0d5c3e;color:#fff;text-align:center;padding:30px 14px 24px;border-bottom:4px solid #e0a800}
+h1{margin:4px 0;font-size:26px;letter-spacing:.5px}
+.tag{color:#f0d77a;font-weight:600;font-size:13px}
+header p{max-width:520px;margin:10px auto 16px;color:#e4f1ea;font-size:14px}
+.btn{display:inline-block;background:#e0a800;color:#1a1a1a;font-weight:700;padding:11px 20px;border-radius:999px;text-decoration:none}
+.search{width:100%;margin:16px 0 10px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--text);font-size:15px}
+.tabs{display:flex;gap:6px;overflow-x:auto;padding:4px 0 12px}
+.tabs button{flex:1;min-width:84px;border:1px solid var(--line);background:var(--card);color:var(--text);padding:10px;border-radius:999px;font-weight:600;font-size:14px;cursor:pointer}
+.tabs button.on{background:var(--green);color:#fff;border-color:var(--green)}
+.panel{display:none}.panel.on{display:block}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);min-width:420px}
+th,td{padding:10px;text-align:left;border-bottom:1px solid var(--line);font-size:14px}
+th{background:var(--green);color:#fff}
+.left{color:var(--ok);font-weight:600}.done{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.card b{display:block;margin-bottom:2px}.card span{color:var(--muted);font-size:13px}
+.note{color:var(--muted);font-size:13px;margin:10px 0}
+footer{background:#0d5c3e;color:#e4f1ea;text-align:center;padding:20px 14px;font-size:13px;margin-top:24px}
+footer a{color:#f0d77a}
+</style>
+</head>
+<body>
+<header>
+<div style="font-size:40px">🎓</div>
+<h1>ADMISSION OFFICIAL BD</h1>
+<div class="tag">Circular | Deadline | Eligibility | Fee | Result</div>
+<p>সকল বিশ্ববিদ্যালয়ের ভর্তি পরীক্ষার সময়সূচী ও তথ্য এক জায়গায়।</p>
+<a class="btn" href="https://www.facebook.com/share/1BR2FWWeFD/" id="fb" target="_blank" rel="noopener">Facebook Page Follow Koro</a>
+</header>
+<main class="wrap">
+<input class="search" id="q" placeholder="🔍 বিশ্ববিদ্যালয়ের নাম খুঁজুন..." oninput="render()">
+<div class="tabs" id="tabs">
+<button class="on" data-t="time">সময়কাল</button><button data-t="info">তথ্য</button><button data-t="apply">আবেদন</button><button data-t="result">ফলাফল</button>
+</div>
+<div class="panel on" id="time"><div class="tw"><table><thead><tr><th>বিশ্ববিদ্যালয়</th><th>পরীক্ষার তারিখ</th><th>সময় বাকি</th></tr></thead><tbody id="tb"></tbody></table></div>
+<p class="note">ইউনিটভিত্তিক তারিখ প্রকাশিত হলে আপডেট করা হবে। চূড়ান্ত তারিখের জন্য অফিসিয়াল circular দেখুন।</p></div>
+<div class="panel" id="info"><div class="grid" id="ug"></div></div>
+<div class="panel" id="apply"><div class="card"><b>আবেদনের সময় ও ফি</b><span>Application date, fee ar apply link shobar age amader Facebook page e pabe. Coming soon.</span></div></div>
+<div class="panel" id="result"><div class="card"><b>ফলাফল</b><span>Result publish hole ekhane update hobe. Coming soon.</span></div></div>
+<div class="card" style="margin-top:20px"><b>Contact</b><span>📍 Dhaka, Bangladesh 1205<br>📞 +880 1724-744200<br>💬 Messenger: Admission Official BD</span></div>
+</main>
+<footer>© <span id="y">2026</span> Admission Official BD. Shobsomoy official website theke info verify koro.</footer>
+<script>
+var E=[["ঢাবি (IBA)","2026-12-05T10:00"],["ঢাবি(A)- বিজ্ঞান","2026-12-12T11:00"],["মেডিকেল-ডেন্টাল","2026-12-18T10:00"],["ঢাবি(B)- মানবিক","2026-12-19T11:00"],["ঢাবি(E)- চারুকলা","2026-12-22T11:00"],["ঢাবি(C)- বাণিজ্য","2026-12-26T11:00"],["মেরিটাইম (FMGP)","2026-12-29T10:00"],["মেরিটাইম (FSA)","2026-12-29T15:00"],["মেরিটাইম (FEOS)","2026-12-30T10:00"],["মেরিটাইম (FET)","2026-12-30T15:00"],["জবি(A)- বিজ্ঞান","2027-01-01T10:00"],["কৃষি গুচ্ছ","2027-01-02T11:00"],["KUET","2027-01-08T09:30"],["জবি(E)- চারু","2027-01-08T10:00"],["জাবি (১০-২১ জানুয়ারি)","2027-01-10T10:00"],["জবি(B)- মানবিক","2027-01-15T10:00"],["BUP (FASS)","2027-01-16T10:30"],["SUST A","2027-01-17T15:00"],["SUST B","2027-01-18T15:00"],["CUET","2027-01-23T10:00"],["RUET","2027-01-28T10:00"],["চবি(C)- বাণিজ্য","2027-01-29T11:00"],["BUTEX","2027-01-29T10:00"],["AAUB","2027-01-30T10:00"],["চবি(A)- বিজ্ঞান","2027-01-30T11:00"],["BUET","2027-02-01T09:00"],["চবি(B1)","2027-02-03T11:00"],["MIST C Unit","2027-02-05T10:00"],["চবি(B)- মানবিক","2027-02-05T11:00"],["কুবি(A)","2027-02-05T11:00"],["খুবি(C)- বাণিজ্য","2027-02-05T13:30"],["MIST A Unit","2027-02-06T09:00"],["চবি(D)- সমাজবিজ্ঞান","2027-02-06T11:00"],["MIST B Unit","2027-02-06T14:00"],["কুবি(B)","2027-02-06T15:00"],["কুবি(C)","2027-02-07T11:00"],["চবি(D1)","2027-02-08T11:00"],["রাবি(B)- বাণিজ্য","2027-02-12T11:00"],["রাবি(C)- বিজ্ঞান","2027-02-13T11:00"],["রাবি(A)- মানবিক","2027-02-20T11:00"],["গুচ্ছ(B)- মানবিক","2027-03-19T10:00"],["গুচ্ছ(C)- বাণিজ্য","2027-03-20T10:00"],["গুচ্ছ(A)- বিজ্ঞান","2027-03-27T10:00"]];
+var U=["AFMC & AMC","Aviation & Aerospace University","BUET","BUP","BUTEX","CUET","DCU","IUT","KUET","MIST","Maritime University","Medical & Dental","Nursing","ঢাকা বিশ্ববিদ্যালয়","চট্টগ্রাম বিশ্ববিদ্যালয়","রাজশাহী বিশ্ববিদ্যালয়","জাহাঙ্গীরনগর বিশ্ববিদ্যালয়","জগন্নাথ বিশ্ববিদ্যালয়","খুলনা বিশ্ববিদ্যালয়","কুমিল্লা বিশ্ববিদ্যালয়","SUST","RUET","গুচ্ছ (GST)","কৃষি গুচ্ছ"];
+var BN="০১২৩৪৫৬৭৮৯";function bn(n){return String(n).replace(/\d/g,function(d){return BN[d]})}
+var M=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+function fmt(s){var d=new Date(s+":00+06:00"),t=new Date(d.getTime()+6*3600000);var h=t.getUTCHours(),m=t.getUTCMinutes();return t.getUTCDate()+" "+M[t.getUTCMonth()]+" "+t.getUTCFullYear()+", "+(h%12||12)+":"+(m<10?"0":"")+m+" "+(h>=12?"pm":"am")}
+function left(s){var ms=new Date(s+":00+06:00")-new Date();if(ms<=0)return'<span class="done">শেষ</span>';var d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);return'<span class="left">'+bn(d)+' দিন '+bn(h)+' ঘন্টা '+bn(m)+' মি.</span>'}
+function render(){var q=document.getElementById("q").value.trim().toLowerCase();
+document.getElementById("tb").innerHTML=E.filter(function(e){return e[0].toLowerCase().indexOf(q)>-1}).map(function(e){return"<tr><td>"+e[0]+"</td><td>"+fmt(e[1])+"</td><td>"+left(e[1])+"</td></tr>"}).join("")||'<tr><td colspan="3">কিছু পাওয়া যায়নি</td></tr>';
+document.getElementById("ug").innerHTML=U.filter(function(u){return u.toLowerCase().indexOf(q)>-1}).map(function(u){return'<div class="card"><b>'+u+'</b><span>Circular, fee ar eligibility Facebook page e</span></div>'}).join("")}
+document.getElementById("tabs").onclick=function(e){var t=e.target.dataset.t;if(!t)return;document.querySelectorAll(".tabs button").forEach(function(b){b.classList.toggle("on",b===e.target)});document.querySelectorAll(".panel").forEach(function(p){p.classList.toggle("on",p.id===t)})};
+document.getElementById("y").textContent=new Date().getFullYear();
+render();setInterval(render,60000);
+</script>
+</body>
+</html>
